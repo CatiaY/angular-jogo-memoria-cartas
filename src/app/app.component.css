@@ -1,0 +1,83 @@
+.container {
+    margin: auto;
+    display:inline-flexbox;    
+}
+
+.jogo-memoria {
+    height: 860px;
+    width: 960px;
+    padding: 5px;
+    background-color: rgb(228, 241, 243);
+    margin: 10px auto auto auto;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px; /* Perspectiva no eixo z. Quanto maior, melhor o efeito da perspectiva */
+}
+
+.carta {    
+    height: calc(25% - 10px);
+    width: calc(16.666% - 10px);
+    margin: 5px;
+    position: relative;
+    border-radius: 15px; 
+    box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d; /* Adiciona perspectiva 3d. Dessa forma consegue exibir o verso */
+    transition: transform .9s; /* Controla a velocidade do efeito de girar */
+}
+
+/* Reduz o tamanho da carta quando é clicado */
+.carta:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.desabilitado {
+    pointer-events: none;
+}
+
+.carta-frente,
+.carta-verso {    
+  width: 100%;
+  height: 100%;  
+  position: absolute;  
+  border-radius: 15px;  
+  backface-visibility: hidden; /* Esconde o "verso" do elemento quando girar a carta */
+}
+
+/* Deixa a frente da carta "virada para trás". 
+Dessa forma, quando girar a div, essa parte ficará voltada para frente
+enquanto o elemento que contém o verso fica voltado para trás:
+*/
+.carta-frente {
+    transform: rotateY(180deg);
+}
+
+/* Animação da rotação */
+.flip {
+    transform: rotateY(180deg);
+}
+
+.legenda {
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.tempo {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.pontuacao {
+    text-align: center;
+    padding-right: 30px;
+    margin-top: -5px;
+    display: block;   
+    height: 10px;
+}

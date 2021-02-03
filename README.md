@@ -1,4 +1,18 @@
-# JogoMemoriaCards
+# Jogo de Memória
+Projeto utilizando Typescript e Angular 11.
+
+## Demonstração: [Link](http://jogo-memoria-cartas.s3-website-sa-east-1.amazonaws.com/)
+
+<p>&nbsp;</p>
+
+![Preview](ReadMe/demonstracao.gif)
+
+<p>&nbsp;</p>
+
+O desenvolvimento do projeto base foi feito a partir da atividade "Desenvolvendo um jogo da memória", de [
+Gabriela Pinheiro](https://github.com/SpruceGabriela/jogo-da-memoria-dio), da Digital Innovation One.
+
+<p>&nbsp;</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
